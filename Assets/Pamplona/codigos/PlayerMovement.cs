@@ -30,13 +30,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
     }
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
 
         // flip correto sem alterar tamanho
         if (moveInput > 0)
