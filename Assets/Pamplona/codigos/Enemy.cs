@@ -22,12 +22,12 @@ public class Enemy : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = new Vector2(movingRight ? speed : -speed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(movingRight ? speed : -speed, rb.linearVelocity.y);
     }
 
     void CheckGround()
     {
-        // Verifica se há chão à frente
+        // Verifica se hï¿½ chï¿½o ï¿½ frente
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, groundLayer);
         if (!groundInfo.collider)
         {
@@ -57,13 +57,13 @@ public class Enemy : MonoBehaviour
                 Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
                 if (playerRb != null)
                 {
-                    playerRb.velocity = new Vector2(playerRb.velocity.x, 10f); // dá um pulo no jogador
+                    playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, 10f); // dï¿½ um pulo no jogador
                 }
             }
             else
             {
                 Debug.Log("Player levou dano!");
-                // Aqui você pode chamar o script de vida do player
+                // Aqui vocï¿½ pode chamar o script de vida do player
             }
         }
     }
