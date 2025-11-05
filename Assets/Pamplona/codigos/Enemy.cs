@@ -1,75 +1,72 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 2f;
-    public Transform groundCheck;
-    public LayerMask groundLayer;
+    [Header("Configurações de Movimento")]
+    public float speed = 2f;              // velocidade do inimigo
+    public float detectionRange = 5f;     // distância pra começar a seguir
+    public float attackRange = 1.5f;      // distância pra poder ser morto
 
-    private Rigidbody2D rb;
-    private bool movingRight = true;
+    [Header("Debug")]
+    public bool debugGizmos = true;
+
+    private Transform player;
+    private bool isDead = false;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        // Acha o player pela tag
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null)
+        {
+            player = p.transform;
+        }
+        else
+        {
+            Debug.LogError("[Enemy] Player com tag 'Player' não encontrado na cena.");
+        }
     }
 
     void Update()
     {
-        Move();
-        CheckGround();
-    }
+        if (isDead || player == null) return;
 
-    void Move()
-    {
-        rb.linearVelocity = new Vector2(movingRight ? speed : -speed, rb.linearVelocity.y);
-    }
+        float dist = Vector2.Distance(transform.position, player.position);
 
-    void CheckGround()
-    {
-        // Verifica se h� ch�o � frente
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, 1f, groundLayer);
-        if (!groundInfo.collider)
+        // Segue o player se estiver dentro do alcance de detecção
+        if (dist <= detectionRange)
         {
-            Flip();
-        }
-    }
+            Vector3 target = new Vector3(player.position.x, transform.position.y, transform.position.z);
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
-    void Flip()
-    {
-        movingRight = !movingRight;
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Vector2 contactPoint = collision.contacts[0].point;
-            Vector2 center = collision.collider.bounds.center;
-
-            if (contactPoint.y > center.y)
-            {
-                // Jogador pulou em cima
-                Die();
-                Rigidbody2D playerRb = collision.gameObject.GetComponent<Rigidbody2D>();
-                if (playerRb != null)
-                {
-                    playerRb.linearVelocity = new Vector2(playerRb.linearVelocity.x, 10f); // d� um pulo no jogador
-                }
-            }
+            // Inverte o sprite conforme a posição do player
+            if (player.position.x < transform.position.x)
+                transform.localScale = new Vector3(-1, 1, 1);
             else
-            {
-                Debug.Log("Player levou dano!");
-                // Aqui voc� pode chamar o script de vida do player
-            }
+                transform.localScale = new Vector3(1, 1, 1);
         }
     }
 
-    void Die()
+    // 💥 Chamado pelo PlayerAttack quando o inimigo é atingido
+    public void Die()
     {
-        Destroy(gameObject);
+        if (isDead) return;
+
+        isDead = true;
+
+        Debug.Log("[Enemy] Inimigo morreu!");
+        Destroy(gameObject); // Faz o inimigo desaparecer da cena
+    }
+
+    // Mostra alcance no editor
+    void OnDrawGizmosSelected()
+    {
+        if (!debugGizmos) return;
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }
