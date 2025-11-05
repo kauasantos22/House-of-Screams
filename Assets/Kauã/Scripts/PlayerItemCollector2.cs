@@ -12,7 +12,7 @@ public class PlayerItemCollector : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(collectKey))
+        if (Input.GetKeyDown(collectKey)) 
         {
             ColetarItem();
         }
