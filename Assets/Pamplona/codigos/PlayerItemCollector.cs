@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerItemCollector : MonoBehaviour
+public class PlayerItemCollector2: MonoBehaviour
 {
     public KeyCode collectKey = KeyCode.E; // tecla para coletar
     public float collectRange = 1.5f; // distância máxima para coletar
