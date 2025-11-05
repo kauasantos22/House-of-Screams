@@ -28,7 +28,7 @@ public class PlayerItemCollector : MonoBehaviour
             Debug.Log("Item coletado: " + item.name);
 
             // Verifica se o item é um power-up de invencibilidade
-            if (item.CompareTag("PowerUp"))
+            if (item.CompareTag("PowerUp")) 
             {
                 AtivarPowerUpInvencibilidade();
             }
