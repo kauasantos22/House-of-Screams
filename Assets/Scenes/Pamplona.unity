@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 476727867}
   - component: {fileID: 476727868}
   - component: {fileID: 476727869}
+  - component: {fileID: 476727870}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -412,7 +413,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.48, y: 22.07539}
+    oldSize: {x: 0.44, y: 0.81}
     newSize: {x: 9.48, y: 22.07539}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -494,7 +495,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6313236231302077704, guid: 431746f130d965d4988835c93659bc16, type: 3}
+  m_Sprite: {fileID: 4723107735738678597, guid: 77ba605bbd83f4448bc8683510c3155e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -594,6 +595,32 @@ MonoBehaviour:
   currentHealth: 100
   healthBar: {fileID: 2140181740}
   invincibleTime: 1
+--- !u!114 &476727870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476727860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b86c2016e1d4bb4480648388a39a4a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
+  walkSprites:
+  - {fileID: 4944230376442633554, guid: 19f2f91e3fdfd8740b7c57578eee70ed, type: 3}
+  - {fileID: -2274363484027164459, guid: 19f2f91e3fdfd8740b7c57578eee70ed, type: 3}
+  - {fileID: 8284087734974297348, guid: 19f2f91e3fdfd8740b7c57578eee70ed, type: 3}
+  - {fileID: 5304202850863732263, guid: 19f2f91e3fdfd8740b7c57578eee70ed, type: 3}
+  - {fileID: 2833043080597125133, guid: 19f2f91e3fdfd8740b7c57578eee70ed, type: 3}
+  - {fileID: -2217414122262695004, guid: 19f2f91e3fdfd8740b7c57578eee70ed, type: 3}
+  - {fileID: -4440497016933152808, guid: 19f2f91e3fdfd8740b7c57578eee70ed, type: 3}
+  - {fileID: 8676454946275842879, guid: 19f2f91e3fdfd8740b7c57578eee70ed, type: 3}
+  jumpSprites:
+  - {fileID: 7460046300004610927, guid: 206b2c968fc112143a4255529de21650, type: 3}
+  - {fileID: 7034338576483803127, guid: 206b2c968fc112143a4255529de21650, type: 3}
+  idleSprite: {fileID: 4723107735738678597, guid: 77ba605bbd83f4448bc8683510c3155e, type: 3}
+  frameRate: 0.1
 --- !u!1 &540903831
 GameObject:
   m_ObjectHideFlags: 0
