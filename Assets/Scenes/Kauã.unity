@@ -681,6 +681,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1130680988}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &716546329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 716546330}
+  m_Layer: 7
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &716546330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716546329}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.66, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1130680988}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &824979259
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,6 +1257,7 @@ GameObject:
   - component: {fileID: 1130680989}
   - component: {fileID: 1130680990}
   - component: {fileID: 1130680991}
+  - component: {fileID: 1130680992}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1379,6 +1411,7 @@ Transform:
   m_Children:
   - {fileID: 64389649}
   - {fileID: 637323884}
+  - {fileID: 716546330}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1130680989
@@ -1430,6 +1463,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   duracaoInvencibilidade: 5
+--- !u!114 &1130680992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130680984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb84c1cbef1ec442bc1526b311ff610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAtaque
+  attackRadius: 2
+  attackCooldown: 0.5
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  attackPoint: {fileID: 716546330}
+  debugGizmos: 1
 --- !u!1 &1148034687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,10 +1936,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f10180ff539b39d4cb03bce532f0fd63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inmigo
-  speed: 2
   detectionRange: 7
-  attackRange: 3
+  speed: 4
   debugGizmos: 1
+  damage: 15
+  knockbackForce: 5
 --- !u!61 &1823856050
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1918,7 +1971,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

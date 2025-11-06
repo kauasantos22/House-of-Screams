@@ -1,30 +1,27 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 
-public class Inmigo : MonoBehaviour
+public class Inimigo : MonoBehaviour
 {
-    [Header("Configurações de Movimento")]
-    public float speed = 2f;              // velocidade do inimigo
-    public float detectionRange = 5f;     // distância pra começar a seguir
-    public float attackRange = 1.5f;      // distância pra poder ser morto
-
-    [Header("Debug")]
+    public float detectionRange = 5f;
+    public float speed = 2f;
     public bool debugGizmos = true;
+    public int damage = 20;
+    public float knockbackForce = 5f;
 
     private Transform player;
+    private Rigidbody2D rb;
     private bool isDead = false;
 
     void Start()
     {
-        // Acha o player pela tag
         GameObject p = GameObject.FindGameObjectWithTag("Player");
         if (p != null)
-        {
             player = p.transform;
-        }
         else
-        {
-            Debug.LogError("[Enemy] Player com tag 'Player' não encontrado na cena.");
-        }
+            Debug.LogError("[Enemy] Player com tag 'Player' não encontrado.");
+
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -33,13 +30,13 @@ public class Inmigo : MonoBehaviour
 
         float dist = Vector2.Distance(transform.position, player.position);
 
-        // Segue o player se estiver dentro do alcance de detecção
+        // Segue o player se estiver dentro do alcance
         if (dist <= detectionRange)
         {
             Vector3 target = new Vector3(player.position.x, transform.position.y, transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
-            // Inverte o sprite conforme a posição do player
+            // Vira o sprite pro lado certo
             if (player.position.x < transform.position.x)
                 transform.localScale = new Vector3(-1, 1, 1);
             else
@@ -47,26 +44,45 @@ public class Inmigo : MonoBehaviour
         }
     }
 
-    // 💥 Chamado pelo PlayerAttack quando o inimigo é atingido
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (isDead) return;
+        
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            
+           
+            PlayerLife ph = collision.gameObject.GetComponent<PlayerLife>();
+
+            if (ph != null)
+            {
+                print("olá");
+                ph.TakeDamage(damage);
+
+                // Aplica empurrão no player
+                Rigidbody2D player = collision.gameObject.GetComponent<Rigidbody2D>();
+                if (player != null)
+                {
+                    Vector2 knockbackDir = (collision.transform.position - transform.position).normalized;
+                    player.AddForce(knockbackDir * knockbackForce, ForceMode2D.Impulse);
+                }
+            }
+        }
+    }
+
     public void Die()
     {
         if (isDead) return;
-
         isDead = true;
-
-        Debug.Log("[Enemy] Inimigo morreu!");
-        Destroy(gameObject); // Faz o inimigo desaparecer da cena
+        Debug.Log("[Enemy] Inimigo morto!");
+        Destroy(gameObject, 0.05f);
     }
 
-    // Mostra alcance no editor
     void OnDrawGizmosSelected()
     {
         if (!debugGizmos) return;
-
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }

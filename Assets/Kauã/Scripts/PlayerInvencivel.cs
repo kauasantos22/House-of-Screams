@@ -23,7 +23,7 @@ public class PlayerInvencivel : MonoBehaviour
         estaInvencivel = true;
 
         // Muda a cor para indicar invencibilidade (ex: amarelo)
-        spriteRenderer.color = Color.yellow;
+        spriteRenderer.color = Color.rebeccaPurple;
 
         // Aqui você pode desativar o dano, colisões, etc.
         // Exemplo: GetComponent<Collider2D>().enabled = false;
