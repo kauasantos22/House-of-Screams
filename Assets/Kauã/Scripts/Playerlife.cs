@@ -20,12 +20,11 @@ public class PlayerLife : MonoBehaviour
 
     public float invincibleTime = 1f; // tempo de invencibilidade após levar dano
 
-    private bool isInvincible = false;
-
+    PlayerItemCollector collector;
     void Start()
 
     {
-
+        collector = GetComponent<PlayerItemCollector>();
         currentHealth = maxHealth;
 
         if (healthBar != null)
@@ -44,7 +43,7 @@ public class PlayerLife : MonoBehaviour
 
     {
 
-        if (isInvincible) return;
+        if (collector.estaInvencivel) return;
 
         currentHealth -= amount;
 
@@ -78,11 +77,11 @@ public class PlayerLife : MonoBehaviour
 
     {
 
-        isInvincible = true;
+        collector.estaInvencivel = true;
 
         yield return new WaitForSeconds(invincibleTime);
 
-        isInvincible = false;
+        collector.estaInvencivel = false;
 
     }
 

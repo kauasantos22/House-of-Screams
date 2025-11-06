@@ -10,9 +10,19 @@ public class PlayerItemCollector : MonoBehaviour
     [Header("Configuração do Power-Up")]
     public float duracaoInvencibilidade = 5f; // duração da invencibilidade em segundos
 
+    private SpriteRenderer spriteRenderer;
+    private Color corOriginal;
+    public bool estaInvencivel = false;
+
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        corOriginal = spriteRenderer.color;
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(collectKey)) 
+        if (Input.GetKeyDown(collectKey))
         {
             ColetarItem();
         }
@@ -28,7 +38,7 @@ public class PlayerItemCollector : MonoBehaviour
             Debug.Log("Item coletado: " + item.name);
 
             // Verifica se o item é um power-up de invencibilidade
-            if (item.CompareTag("PowerUp")) 
+            if (item.CompareTag("PowerUp"))
             {
                 AtivarPowerUpInvencibilidade();
             }
@@ -40,18 +50,33 @@ public class PlayerItemCollector : MonoBehaviour
 
     void AtivarPowerUpInvencibilidade()
     {
-        PlayerInvencivel playerInvencivel = GetComponent<PlayerInvencivel>();
-        if (playerInvencivel != null)
+        if (!estaInvencivel)
         {
-            playerInvencivel.AtivarInvencibilidade(duracaoInvencibilidade);
+            estaInvencivel = true;
             Debug.Log("Power-up de invencibilidade ativado!");
+
+            // Altera a cor do jogador para indicar invencibilidade
+            spriteRenderer.color = Color.yellow;
+
+            // Inicia a contagem para voltar ao normal
+            Invoke(nameof(DesativarInvencibilidade), duracaoInvencibilidade);
         }
+    }
+
+    void DesativarInvencibilidade()
+    {
+        estaInvencivel = false;
+
+        // Volta a cor original
+        spriteRenderer.color = corOriginal;
+
+        Debug.Log("Invencibilidade acabou!");
     }
 
     void OnDrawGizmosSelected()
     {
         // Mostra o raio de coleta no editor
-        Gizmos.color = Color.yellow;
+        Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, collectRange);
     }
 }

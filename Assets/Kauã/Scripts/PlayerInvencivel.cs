@@ -1,46 +1,52 @@
 using UnityEngine;
 
-public class PlayerInvencivel : MonoBehaviour
+public class PlayerInvensivel : MonoBehaviour
 {
-    private bool estaInvencivel = false;
-    private SpriteRenderer spriteRenderer;
-    private Color corOriginal;
+    [Header("Configuração da Vida")]
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    [Header("Invulnerabilidade")]
+    public bool invulneravel = false; // impede o jogador de tomar dano
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        corOriginal = spriteRenderer.color;
+        currentHealth = maxHealth;
     }
 
-    public void AtivarInvencibilidade(float duracao)
+    public void TakeDamage(int dano)
     {
-        if (!estaInvencivel)
-            StartCoroutine(InvencibilidadeCoroutine(duracao));
+        // Impede que o jogador leve dano durante a invencibilidade
+        if (invulneravel)
+            return;
+
+        currentHealth -= dano;
+
+        // Garante que a vida não fique negativa
+        if (currentHealth < 0)
+            currentHealth = 0;
+
+        Debug.Log("Jogador tomou dano! Vida atual: " + currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            Morrer();
+        }
     }
 
-    private System.Collections.IEnumerator InvencibilidadeCoroutine(float duracao)
+    void Morrer()
     {
-        estaInvencivel = true;
-
-        // Muda a cor para indicar invencibilidade (ex: amarelo)
-        spriteRenderer.color = Color.rebeccaPurple;
-
-        // Aqui você pode desativar o dano, colisões, etc.
-        // Exemplo: GetComponent<Collider2D>().enabled = false;
-
-        yield return new WaitForSeconds(duracao);
-
-        // Volta ao normal
-        spriteRenderer.color = corOriginal;
-        estaInvencivel = false;
-
-        // Reativa o que foi desativado (se aplicável)
-        // GetComponent<Collider2D>().enabled = true;
+        Debug.Log("Jogador morreu!");
+        // Aqui você pode adicionar animação de morte, reinício da cena etc.
     }
 
-    // Método para verificar se o player está invencível
-    public bool EstaInvencivel()
+    public void Curar(int quantidade)
     {
-        return estaInvencivel;
+        currentHealth += quantidade;
+
+        if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
+
+        Debug.Log("Jogador curado! Vida atual: " + currentHealth);
     }
 }

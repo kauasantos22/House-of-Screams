@@ -14,6 +14,8 @@ public class PlayerHealth : MonoBehaviour
     public float invincibleTime = 1f; // tempo de invencibilidade após levar dano
     private bool isInvincible = false;
 
+    public bool invulneravel { get; internal set; }
+
     void Start()
     {
         currentHealth = maxHealth;

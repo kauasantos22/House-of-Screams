@@ -1037,6 +1037,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   duracaoInvencibilidade: 5
+  estaInvencivel: 0
 --- !u!1 &907359099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,6 +1259,7 @@ GameObject:
   - component: {fileID: 1130680990}
   - component: {fileID: 1130680991}
   - component: {fileID: 1130680992}
+  - component: {fileID: 1130680993}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1386,7 +1388,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.1273585, g: 0.59029603, b: 1, a: 1}
+  m_Color: {r: 0.1541919, g: 0.85185844, b: 0.990566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1445,6 +1447,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2369917816a37fe4abb5846b2fc42ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInvencivel
+  maxHealth: 100
+  currentHealth: 0
+  invulneravel: 0
 --- !u!114 &1130680991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1463,6 +1468,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   duracaoInvencibilidade: 5
+  estaInvencivel: 0
 --- !u!114 &1130680992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1482,6 +1488,22 @@ MonoBehaviour:
     m_Bits: 256
   attackPoint: {fileID: 716546330}
   debugGizmos: 1
+--- !u!114 &1130680993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130680984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c81ba02a6cfdc747ac629f19856af9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerLife
+  maxHealth: 100
+  currentHealth: 100
+  healthBar: {fileID: 1955594946}
+  invincibleTime: 1
 --- !u!1 &1148034687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,7 +1848,7 @@ RectTransform:
   m_Children:
   - {fileID: 1955594945}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.34}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1917,13 +1939,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823856046}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.28, y: -2.51, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.70722395, w: -0.70698965}
+  m_LocalPosition: {x: 5.19, y: -2.72, z: 0}
   m_LocalScale: {x: 3.0945027, y: 2.9487731, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 450.01898}
 --- !u!114 &1823856049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1937,10 +1959,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inmigo
   detectionRange: 7
-  speed: 4
+  speed: 2
   debugGizmos: 1
   damage: 15
-  knockbackForce: 5
+  knockbackForce: 32
 --- !u!61 &1823856050
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1971,7 +1993,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
