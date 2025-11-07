@@ -10,13 +10,14 @@ public class PlayerItemCollector : MonoBehaviour
     [Header("Configuração do Power-Up")]
     public float duracaoInvencibilidade = 5f; // duração da invencibilidade em segundos
 
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private Color corOriginal;
     public bool estaInvencivel = false;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         corOriginal = spriteRenderer.color;
     }
 
@@ -44,6 +45,7 @@ public class PlayerItemCollector : MonoBehaviour
             }
 
             // destrói o item coletado
+            Debug.Log($"Destruindo: {item.gameObject.name}");
             Destroy(item.gameObject);
         }
     }
@@ -56,13 +58,20 @@ public class PlayerItemCollector : MonoBehaviour
             Debug.Log("Power-up de invencibilidade ativado!");
 
             // Altera a cor do jogador para indicar invencibilidade
-            spriteRenderer.color = Color.yellow;
+            Debug.Log($"spriteRenderer nulo? {spriteRenderer == null}");
+            Debug.Log(spriteRenderer.gameObject.name);
+            spriteRenderer.color = Color.magenta;                       
+            Debug.Log($"Cor definida para: {spriteRenderer.color}");
+            Invoke(nameof(TestarCor), 0.1f);
 
             // Inicia a contagem para voltar ao normal
             Invoke(nameof(DesativarInvencibilidade), duracaoInvencibilidade);
         }
     }
-
+    void TestarCor()
+    {
+        Debug.Log($"Cor atual após 0.1s: {spriteRenderer.color}");
+    }
     void DesativarInvencibilidade()
     {
         estaInvencivel = false;
@@ -76,7 +85,7 @@ public class PlayerItemCollector : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         // Mostra o raio de coleta no editor
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(transform.position, collectRange);
     }
 }

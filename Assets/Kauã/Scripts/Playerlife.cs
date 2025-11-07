@@ -27,6 +27,8 @@ public class PlayerLife : MonoBehaviour
         collector = GetComponent<PlayerItemCollector>();
         currentHealth = maxHealth;
 
+        
+
         if (healthBar != null)
 
         {
@@ -42,6 +44,7 @@ public class PlayerLife : MonoBehaviour
     public void TakeDamage(int amount)
 
     {
+        print(collector.estaInvencivel);
 
         if (collector.estaInvencivel) return;
 

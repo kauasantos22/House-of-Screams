@@ -57,7 +57,7 @@ public class Inimigo : MonoBehaviour
 
             if (ph != null)
             {
-                print("olá");
+                print("ataque");
                 ph.TakeDamage(damage);
 
                 // Aplica empurrão no player
