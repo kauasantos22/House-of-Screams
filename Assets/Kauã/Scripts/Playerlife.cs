@@ -27,7 +27,7 @@ public class PlayerLife : MonoBehaviour
         collector = GetComponent<PlayerItemCollector>();
         currentHealth = maxHealth;
 
-        
+        print(collector.estaInvencivel);
 
         if (healthBar != null)
 

@@ -1943,7 +1943,7 @@ MonoBehaviour:
   speed: 2
   debugGizmos: 1
   damage: 15
-  knockbackForce: 32
+  knockbackForce: 5
 --- !u!61 &1823856050
 BoxCollider2D:
   m_ObjectHideFlags: 0
