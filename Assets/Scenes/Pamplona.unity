@@ -344,11 +344,11 @@ GameObject:
   - component: {fileID: 476727863}
   - component: {fileID: 476727862}
   - component: {fileID: 476727861}
-  - component: {fileID: 476727866}
   - component: {fileID: 476727867}
   - component: {fileID: 476727868}
   - component: {fileID: 476727869}
   - component: {fileID: 476727870}
+  - component: {fileID: 476727871}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c96cf24b685ee42a137ebd3b125269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 5
+  speed: 15
   jumpForce: 7
   groundCheck: {fileID: 562394486}
   groundRadius: 0.2
@@ -524,23 +524,6 @@ Transform:
   - {fileID: 1119511328}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &476727866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476727860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8804f0a0a252b5445a345f2ab85346cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerItemCollector
-  collectKey: 101
-  collectRange: 1.5
-  itemLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &476727867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,6 +604,26 @@ MonoBehaviour:
   - {fileID: 7034338576483803127, guid: 206b2c968fc112143a4255529de21650, type: 3}
   idleSprite: {fileID: 4723107735738678597, guid: 77ba605bbd83f4448bc8683510c3155e, type: 3}
   frameRate: 0.1
+--- !u!114 &476727871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476727860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 788bed400d8df46489c9213172e23def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerItemCollector
+  collectKey: 101
+  collectRange: 1.5
+  itemLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  duracaoInvencibilidade: 5
+  spriteRenderer: {fileID: 0}
+  estaInvencivel: 0
 --- !u!1 &540903831
 GameObject:
   m_ObjectHideFlags: 0
