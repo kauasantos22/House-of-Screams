@@ -888,32 +888,31 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Jack Pobel cresceu em uma casa simples, isolada no fim de um bairro conhecido
-    por lendas antigas \u2014 hist\xF3rias de bruxas que nunca morreram, crian\xE7as
-    que desapareciam no vento e vozes que falavam com quem ousava escutar. Seus pais,
-    r\xEDgidos e silenciosos, sempre o proibiram de comentar sobre qualquer barulho
-    estranho dentro de casa. Diziam que era \u201Cimagina\xE7\xE3o\u201D, mas o olhar
-    assustado deles revelava outra verdade.\nDesde pequeno, Jack ouvia sussurros
-    vindos das paredes como se algu\xE9m estivesse preso ali dentro. \xC0s vezes,
-    eram chamados suaves pelo seu nome; outras vezes, choros curtos, como de quem
-    implora para ser ouvido. Durante a noite, passos pesados atravessavam o teto,
-    mesmo quando todos estavam dormindo. A casa inteira parecia respirar com ele.\nNo
-    bairro, as pessoas falavam da Dama do Vento Seco, uma bruxa antiga que caminhava
-    sem sombra e se aproximava apenas das casas onde havia medo. Jack fingia n\xE3o
-    acreditar, mas cada noite tornava mais dif\xEDcil ignorar a sensa\xE7\xE3o de
-    que algo o observava.\nFoi no Halloween que tudo se revelou. Os barulhos ficaram
-    mais altos, os sussurros mais claros, e a casa come\xE7ou a se comportar como
-    se tivesse vida pr\xF3pria. Portas abriram sozinhas. Sombras se arrastaram pelos
-    cantos. E a presen\xE7a que Jack sempre sentiu finalmente se mostrou.\nAo explorar
-    o por\xE3o, ele encontrou recortes de jornal sobre uma maldi\xE7\xE3o que atingiu
-    uma antiga fam\xEDlia da regi\xE3o \u2014 uma fam\xEDlia com o mesmo sobrenome
-    que o dele. Antes que pudesse entender, a figura de uma mulher apareceu no escuro,
-    com a pele rachada como madeira seca e olhos vazios, como buracos na noite.\nEla
-    falou seu nome como se o conhecesse desde sempre.\nNaquele momento, Jack percebeu
-    que n\xE3o era a casa que estava assombrada.\nEra ele."
+  m_text: "\nJack Pobel cresceu em uma casa simples isolada no fim de um bairro conhecido
+    por lendas antigas hist\xF3rias de bruxas que nunca morreram crian\xE7as que
+    desapareciam no vento e vozes que falavam com quem ousava escutar Seus pais r\xEDgidos
+    e silenciosos sempre o proibiram de comentar sobre qualquer barulho estranho
+    dentro de casa Diziam que era imagina\xE7\xE3o mas o olhar assustado deles revelava
+    outra verdade\nDesde pequeno Jack ouvia sussurros vindos das paredes como se
+    algu\xE9m estivesse preso ali dentro \xC0s vezes eram chamados suaves pelo seu
+    nome outras vezes choros curtos como de quem implora para ser ouvido Durante
+    a noite passos pesados atravessavam o teto mesmo quando todos estavam dormindo
+    A casa inteira parecia respirar com ele\nNo bairro as pessoas falavam da Dama
+    do Vento Seco uma bruxa antiga que caminhava sem sombra e se aproximava apenas
+    das casas onde havia medo Jack fingia n\xE3o acreditar mas cada noite tornava
+    mais dif\xEDcil ignorar a sensa\xE7\xE3o de que algo o observava\nFoi no Halloween
+    que tudo se revelou Os barulhos ficaram mais altos os sussurros mais claros e
+    a casa come\xE7ou a se comportar como se tivesse vida pr\xF3pria Portas abriram
+    sozinhas Sombras se arrastaram pelos cantos E a presen\xE7a que Jack sempre sentiu
+    finalmente se mostrou\nAo explorar o por\xE3o ele encontrou recortes de jornal
+    sobre uma maldi\xE7\xE3o que atingiu uma antiga fam\xEDlia da regi\xE3o uma fam\xEDlia
+    com o mesmo sobrenome que o dele Antes que pudesse entender a figura de uma mulher
+    apareceu no escuro com a pele rachada como madeira seca e olhos vazios como buracos
+    na noite\nEla falou seu nome como se o conhecesse desde sempre\nNaquele momento
+    Jack percebeu que n\xE3o era a casa que estava assombrada\nEra ele"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 89f06c283a9091d4ab291df810410a71, type: 2}
-  m_sharedMaterial: {fileID: 7320824534507455713, guid: 89f06c283a9091d4ab291df810410a71, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 40478834c52bcbc4f9aaa6a0c296f333, type: 2}
+  m_sharedMaterial: {fileID: -3913325432322087165, guid: 40478834c52bcbc4f9aaa6a0c296f333, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
