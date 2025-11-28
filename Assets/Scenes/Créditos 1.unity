@@ -778,9 +778,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84a2a7be2f2f8f42be19586b3bd0102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreditosMove
-  speed: 60
-  limiteY: 550
-  delayReset: 0
+  speed: 50
+  limiteY: 800
+  delayReset: 1
 --- !u!1 &1838382849
 GameObject:
   m_ObjectHideFlags: 0
