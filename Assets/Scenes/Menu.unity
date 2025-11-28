@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32e11f7a634ab4740aca9266d9bf8f6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  sceneName: Principal
+  sceneName: Historia
 --- !u!1 &151033374
 GameObject:
   m_ObjectHideFlags: 0
