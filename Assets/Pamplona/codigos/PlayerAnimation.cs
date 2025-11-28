@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class PlayerAnimation : MonoBehaviour
 {
     [Header("Sprites de Anima��o")]
