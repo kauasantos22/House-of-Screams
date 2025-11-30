@@ -146,14 +146,14 @@ RectTransform:
   m_GameObject: {fileID: 43044671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90.00003}
-  m_LocalScale: {x: 0.029940119, y: 0.029940119, z: 0.029940119}
+  m_LocalScale: {x: 0.0717515, y: 0.0717515, z: 0.0717515}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 924960106}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.18, y: -8.15}
+  m_AnchoredPosition: {x: 3.9, y: -15.1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.46570617, y: 0.38569042}
 --- !u!114 &43044673
@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: JESUS SALVADOR BORROME DIAZ (ARTISTA)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 40478834c52bcbc4f9aaa6a0c296f333, type: 2}
+  m_sharedMaterial: {fileID: -3913325432322087165, guid: 40478834c52bcbc4f9aaa6a0c296f333, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -313,15 +313,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232609383}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.029940119, y: 0.029940119, z: 0.029940119}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 924960106}
+  m_Father: {fileID: 1918541632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.5772247, y: 3.071457}
+  m_AnchoredPosition: {x: -770.1401, y: 374.66}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &232609385
@@ -346,15 +346,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'INTEGRANTES: '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 89f06c283a9091d4ab291df810410a71, type: 2}
+  m_sharedMaterial: {fileID: 7320824534507455713, guid: 89f06c283a9091d4ab291df810410a71, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280069056
-  m_fontColor: {r: 0.754717, g: 0.6693853, b: 0.11035956, a: 1}
+    rgba: 4280183250
+  m_fontColor: {r: 0.8235295, g: 0.4117647, b: 0.1176471, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -371,8 +371,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 89.64
+  m_fontSizeBase: 89.64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -89.03095, w: 0}
+  m_margin: {x: 0, y: -81.32753, z: -520.06696, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -450,14 +450,14 @@ RectTransform:
   m_GameObject: {fileID: 353778358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.029940119, y: 0.029940119, z: 0.029940119}
+  m_LocalScale: {x: 0.06672455, y: 0.06672455, z: 0.06672455}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 924960106}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.0562744, y: -3.37}
+  m_AnchoredPosition: {x: 4.8, y: -3.37}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &353778360
@@ -482,8 +482,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: GABRIEL PAMPLONA SANTOS PEREIRA (PROGRAMADOR)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 40478834c52bcbc4f9aaa6a0c296f333, type: 2}
+  m_sharedMaterial: {fileID: -3913325432322087165, guid: 40478834c52bcbc4f9aaa6a0c296f333, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -756,11 +756,10 @@ Transform:
   m_GameObject: {fileID: 924960104}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -28.120462, y: 14.413102, z: -3006.0002}
+  m_LocalPosition: {x: -32, y: 44, z: -3006.0002}
   m_LocalScale: {x: 33.4, y: 33.4, z: 33.4}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 232609384}
   - {fileID: 1885386035}
   - {fileID: 43044672}
   - {fileID: 353778359}
@@ -779,8 +778,162 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreditosMove
   speed: 60
-  limiteY: 550
+  limiteY: 2000
   delayReset: 0
+--- !u!1 &1312695401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1312695402}
+  - component: {fileID: 1312695405}
+  - component: {fileID: 1312695404}
+  - component: {fileID: 1312695403}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1312695402
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312695401}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1918541632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -762, y: -326}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1312695403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312695401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301f64e2395a9b548bb457d5b1111078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrocarCenaComDelay
+  nomeDaCena: menu
+  tempoDeEspera: 1.5
+  botao: 27
+  telaPreta: {fileID: 0}
+  velocidadeFade: 1
+--- !u!114 &1312695404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312695401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Aperte esc para voltar '
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 89f06c283a9091d4ab291df810410a71, type: 2}
+  m_sharedMaterial: {fileID: 7320824534507455713, guid: 89f06c283a9091d4ab291df810410a71, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281940385
+  m_fontColor: {r: 0.6320754, g: 0.2236116, b: 0.2236116, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 75.2
+  m_fontSizeBase: 75.2
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: -152.46693, z: -258.5309, w: -139.20901}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1312695405
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312695401}
+  m_CullTransparentMesh: 1
 --- !u!1 &1838382849
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,8 +969,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: 0.000015259}
-  m_SizeDelta: {x: 594, y: 334}
+  m_AnchoredPosition: {x: 0.000030518, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1838382851
 MonoBehaviour:
@@ -884,14 +1037,14 @@ RectTransform:
   m_GameObject: {fileID: 1885386034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 90}
-  m_LocalScale: {x: 0.029940119, y: 0.029940119, z: 0.029940119}
+  m_LocalScale: {x: 0.06778443, y: 0.06778443, z: 0.06778443}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 924960106}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.17, y: 1.754097}
+  m_AnchoredPosition: {x: 6.8, y: 9.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.64750916, y: 0.74843353}
 --- !u!114 &1885386036
@@ -916,8 +1069,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "KAU\xC3 FELIPE DOS SANTOS (PROGRAMADOR)"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 40478834c52bcbc4f9aaa6a0c296f333, type: 2}
+  m_sharedMaterial: {fileID: -3913325432322087165, guid: 40478834c52bcbc4f9aaa6a0c296f333, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1087,7 +1240,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 232609384}
   - {fileID: 924960106}
+  - {fileID: 1312695402}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
