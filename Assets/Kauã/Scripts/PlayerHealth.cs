@@ -8,13 +8,11 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
 
     [Header("Referência da Barra de Vida")]
-    public Slider healthBar; // arrasta o Slider da UI aqui
+    public Slider healthBar; // Arraste o Slider aqui
 
-    [Header("Efeito de dano")]
-    public float invincibleTime = 1f; // tempo de invencibilidade após levar dano
+    [Header("Efeito de Dano")]
+    public float invincibleTime = 1f;
     private bool isInvincible = false;
-
-    public bool invulneravel { get; internal set; }
 
     void Start()
     {
